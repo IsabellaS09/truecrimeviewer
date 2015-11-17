@@ -32,24 +32,24 @@ def get_violations():
     params = {
         '$limit': 10,
     }
-    r = requests.get('https://data.montgomerycountymd.gov/resource/ms8i-8ux3.json', params=params)
+    r = requests.get('https://data.montgomerycountymd.gov/resource/ms8i-8ux3.geojson', params=params)
     if r.status_code != 200:
         logger.error('Failed to get traffic violation data. Response: {0}'.format(r.text))
         return
 
-    violations = r.json()
+    geodata = r.json()
     result = []
-    for v in violations:
+    for v in geodata['features']:
         # Location data or bust
-        if not ('latitude' in v and 'longitude' in v):
+        if v.get('geometry') is None:
             continue
 
         # Dialogue
-        v['chat'] = get_chat()
+        v['properties']['chat'] = get_chat()
         result.append(v)
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(current_dir, 'data/violations.json'), 'w+') as f:
+    with open(os.path.join(current_dir, 'data/violations.geojson'), 'w+') as f:
         json.dump(result, f, indent=4, separators=(',', ': '), sort_keys=True)
 
 

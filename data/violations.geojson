@@ -1,0 +1,450 @@
+[
+    {
+        "geometry": {
+            "coordinates": [
+                -77.206518,
+                39.156777
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-1124.2(d2)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "WHITE",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DRIVER USING HANDS TO USE HANDHELD TELEPHONE WHILEMOTOR VEHICLE IS IN MOTION",
+            "dl_state": "MD",
+            "driver_city": "SILVER SPRING",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "F",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.1567766666667",
+            "location": "MVA @ RUSSELL",
+            "longitude": "-77.2065183333333",
+            "make": "TOYOTA",
+            "model": "PATHFINDER",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "HISPANIC",
+            "state": "MD",
+            "subagency": "6th district, Gaithersburg / Montgomery Village",
+            "time_of_stop": "11:09:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2013"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.121358,
+                39.061268
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-707(a)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "BLACK",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DRIVER FAILURE TO STOP AT STOP SIGN LINE",
+            "dl_state": "MD",
+            "driver_city": "BETHESDA",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "F",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.0612683333333",
+            "location": "CHAPMAN AVE / TWINBROOK METRO",
+            "longitude": "-77.1213583333333",
+            "make": "CHEV",
+            "model": "VOLT",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "WHITE",
+            "state": "CA",
+            "subagency": "1st district, Rockville",
+            "time_of_stop": "20:54:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2012"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.26266,
+                39.198307
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-204(b)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "MAROON",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DRIVER FAIL TO STOP AT FLASHING RED TRAFFIC SIGNAL STOP LINE",
+            "dl_state": "MD",
+            "driver_city": "GAITHERSBURG",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.1983066666667",
+            "location": "FATHER HURLEY BLVD AND OBSERVATION DR",
+            "longitude": "-77.26266",
+            "make": "MITSUBISHI",
+            "model": "GALANT",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "BLACK",
+            "state": "MD",
+            "subagency": "5th district, Germantown",
+            "time_of_stop": "02:15:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2003"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.177873,
+                39.28264
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "13-409(b)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "SILVER",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "FAILURE TO DISPLAY REGISTRATION CARD UPON DEMAND BY POLICE OFFICER",
+            "dl_state": "MD",
+            "driver_city": "SILVER SPRING",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.28264",
+            "location": "RIVER RD @ GARY RD",
+            "longitude": "-77.1778733333333",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "OTHER",
+            "state": "WV",
+            "subagency": "2nd district, Bethesda",
+            "time_of_stop": "09:52:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "1998"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.062217,
+                39.037342
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "13-411(f)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "SILVER",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DISPLAYING EXPIRED REGISTRATION PLATE ISSUED BY ANY STATE",
+            "dl_state": "MD",
+            "driver_city": "SILVER SPRING",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.0373416666667",
+            "location": "HILLSDALE DR@ UNIVERSITY BLVD",
+            "longitude": "-77.0622166666667",
+            "make": "FORD",
+            "model": "4S",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "BLACK",
+            "state": "MD",
+            "subagency": "4th district, Wheaton",
+            "time_of_stop": "11:32:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Citation",
+            "work_zone": "No",
+            "year": "2012"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.079905,
+                39.08025
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-202(h2)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "SILVER",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DRIVER FAIL TO STOP AT STEADY RED ARROW SIGNAL",
+            "dl_state": "MD",
+            "driver_city": "SILVER SPRING",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "F",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.08025",
+            "location": "CONNECTICUT AVE/ASPEN HILL RD",
+            "longitude": "-77.079905",
+            "make": "NISSAN",
+            "model": "ALTIMA",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "BLACK",
+            "state": "MD",
+            "subagency": "4th district, Wheaton",
+            "time_of_stop": "20:53:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2005"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.263618,
+                39.18695
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-204(b)",
+            "chat": [
+                {
+                    "character": "E",
+                    "text": "Speak; I am bound to hear."
+                },
+                {
+                    "character": "J",
+                    "text": "So art thou to revenge, when thou shalt hear."
+                },
+                {
+                    "character": "T",
+                    "text": "What?"
+                }
+            ],
+            "color": "SILVER",
+            "commercial_license": "Yes",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2015-04-22T00:00:00.000",
+            "description": "DRIVER FAIL TO STOP AT FLASHING RED TRAFFIC SIGNAL STOP LINE",
+            "dl_state": "MD",
+            "driver_city": "GERMANTOWN",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.18695",
+            "location": "CRYSTAL ROCK DRIVE @ CENTURY BLVD",
+            "longitude": "-77.2636183333333",
+            "make": "TOYT",
+            "model": "TK",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "WHITE",
+            "state": "MD",
+            "subagency": "5th district, Germantown",
+            "time_of_stop": "01:12:00",
+            "vehicle_type": "02 - Automobile",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2002"
+        },
+        "type": "Feature"
+    }
+]
