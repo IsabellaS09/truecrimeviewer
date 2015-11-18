@@ -1,5 +1,10 @@
 (function () {
 	var viewer = $('#viewer');
+	var assets = null;
+	$.getJSON('assets.json', function(a) {
+		// TODO Don't start doing things until we get this
+		assets = a;
+	});
 
 	var map = L.map('map').setView([39.0869949,-77.1811684], 13);
 	var baseLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -21,9 +26,18 @@
 	});
 
 	function renderScene(e) {
+		if (!assets) return; // hack
 		var feature = e.target.feature;
 		var props = feature.properties;
-		viewer.html(props.description);
+		viewer.empty();
+		viewer.append('<div>' + props.description + '</div>');
+
+		// background
+		viewer.css('background-image', 'url("' + assets['background']['day'] + '")');
+
+		// vehicle
+		var v = assets['vehicle']['corolla'];
+		viewer.append('<img class="vehicle" src="' + v['url'] + '">');
 	}
 
 	$(document).ready(function() {

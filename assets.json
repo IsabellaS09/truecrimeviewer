@@ -1,0 +1,12 @@
+{
+	"background" : {
+		"day" : "img/bg/day.png",
+		"dusk" : "img/bg/day.png",
+		"night" : "img/bg/day.png"
+	},
+	"vehicle" : {
+		"corolla" : {
+			"url" : "img/vehicle/corolla.png"
+		}
+	}
+}

@@ -56,14 +56,17 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-#map { height: 180px; }
+#map {
+	height: 180px;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
 
-#viewer {
+#wrapper {
     width: 640px;
     height: 360px;
     position: absolute;
@@ -73,8 +76,17 @@ html, body {
     background-color: white;
 }
 
-#viewer div {
+#viewer {
 	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#viewer img,
+#viewer div {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 
