@@ -63,7 +63,19 @@ html, body {
 	overflow: hidden;
 }
 
+#viewer {
+    width: 640px;
+    height: 360px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -320px;
+    background-color: white;
+}
 
+#viewer div {
+	position: relative;
+}
 
 
 

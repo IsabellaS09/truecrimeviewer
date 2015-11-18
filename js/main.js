@@ -1,4 +1,6 @@
 (function () {
+	var viewer = $('#viewer');
+
 	var map = L.map('map').setView([39.0869949,-77.1811684], 13);
 	var baseLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 		maxZoom: 18,
@@ -8,7 +10,7 @@
 	$.getJSON("data/violations.geojson", function(json) {
 		var violationLayer = L.geoJson(json, {
 			onEachFeature: function (feature, layer) {
-				layer.bindPopup(feature.properties.description);
+				layer.on('click', renderScene);
 			}
 		});
 
@@ -17,6 +19,12 @@
 		map.addLayer(markers);
 		map.fitBounds(markers.getBounds());
 	});
+
+	function renderScene(e) {
+		var feature = e.target.feature;
+		var props = feature.properties;
+		viewer.html(props.description);
+	}
 
 	$(document).ready(function() {
 		resizeMap();
