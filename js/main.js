@@ -25,6 +25,14 @@
 		map.fitBounds(markers.getBounds());
 	});
 
+	function getVehicle(vType) {
+		if (/emerg/i.test(vType)) return 'emergency';
+		if (/boat/i.test(vType)) return 'boat';
+		if (/truck/i.test(vType)) return 'truck';
+		if (/bus/i.test(vType)) return 'bus';
+		return 'auto';
+	}
+
 	function renderScene(e) {
 		if (!assets) return; // hack
 		var feature = e.target.feature;
@@ -35,7 +43,7 @@
 		viewer.css('background-image', 'url("' + assets['background']['day'] + '")');
 
 		// vehicle 640 x 360 transparent
-		var v = assets['vehicle']['corolla'];
+		var v = assets['vehicle'][getVehicle(props['vehicle_type'])];
 		viewer.append('<img class="vehicle" src="' + v['url'] + '">');
 
 		// driver, reference point middle bottom
