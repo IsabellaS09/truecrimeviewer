@@ -9,8 +9,8 @@
 		"corolla" : {
 			"url" : "img/vehicle/corolla.png",
 			"driver" : {
-				"top" : 73,
-				"left" : 190
+				"bottom" : "47%",
+				"left" : "30%"
 			}
 		}
 	},

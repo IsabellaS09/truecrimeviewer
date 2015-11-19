@@ -41,7 +41,7 @@
 		// driver 300 x 120 transparent, assuming the neck is at the middle bottom
 		var driver = assets['driver']['confused'];
 		viewer.append('<img class="driver" src="' + driver['url'] + '">');
-		viewer.find('.driver').css({top: v['driver']['top'], left: v['driver']['left']});
+		viewer.find('.driver').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
 
 		// title, subject to change
 		viewer.append('<div>' + props.description + '</div>');
