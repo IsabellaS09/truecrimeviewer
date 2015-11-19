@@ -1,0 +1,23 @@
+{
+	"background" : {
+		"day" : "img/bg/day.png",
+		"dusk" : "img/bg/day.png",
+		"night" : "img/bg/day.png"
+	},
+	"vehicle_default_color" : "#7F7F7F",
+	"vehicle" : {
+		"corolla" : {
+			"url" : "img/vehicle/corolla.png",
+			"driver" : {
+				"top" : 73,
+				"left" : 190
+			}
+		}
+	},
+	"driver_default_color" : "#FFAEC9",
+	"driver" : {
+		"confused" : {
+			"url" : "img/driver/confused.png"
+		}
+	}
+}
