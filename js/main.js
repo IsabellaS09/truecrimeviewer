@@ -33,6 +33,13 @@
 		return 'auto';
 	}
 
+	function getViolationType(vType) {
+		if (/warning/i.test(vType)) return '3';
+		// Somehow 2 cops aren't as funny as 3
+		// if (/citation/i.test(vType)) return '2';
+		return '1';
+	}
+
 	function renderScene(e) {
 		if (!assets) return; // hack
 		var feature = e.target.feature;
@@ -52,7 +59,7 @@
 		viewer.find('.driver').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
 
 		// cop, reference point middle bottom
-		var cop = assets['cop'];
+		var cop = assets['cop'][getViolationType(props['violation_type'])];
 		viewer.append('<img class="cop" src="' + cop['url'] + '">');
 		viewer.find('.cop').css({bottom: cop['bottom'], left: cop['left']});
 
