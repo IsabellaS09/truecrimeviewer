@@ -19,5 +19,10 @@
 		"confused" : {
 			"url" : "img/driver/confused.png"
 		}
+	},
+	"cop" : {
+		"url" : "img/cop/robo.png",
+		"bottom" : "10%",
+		"left" : "4%"
 	}
 }

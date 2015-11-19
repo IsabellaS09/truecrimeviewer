@@ -38,10 +38,15 @@
 		var v = assets['vehicle']['corolla'];
 		viewer.append('<img class="vehicle" src="' + v['url'] + '">');
 
-		// driver 300 x 120 transparent, assuming the neck is at the middle bottom
+		// driver, reference point middle bottom
 		var driver = assets['driver']['confused'];
 		viewer.append('<img class="driver" src="' + driver['url'] + '">');
 		viewer.find('.driver').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
+
+		// cop, reference point middle bottom
+		var cop = assets['cop'];
+		viewer.append('<img class="cop" src="' + cop['url'] + '">');
+		viewer.find('.cop').css({bottom: cop['bottom'], left: cop['left']});
 
 		// title, subject to change
 		viewer.append('<div>' + props.description + '</div>');
