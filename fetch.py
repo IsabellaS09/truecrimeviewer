@@ -29,18 +29,6 @@ def get_chat():
 
 
 def get_violations():
-    '''
-    This maps violation properties to a weight which is used to determine
-    if a violation is 'interesting'. This is completely subjective.
-    '''
-    weight_map = {
-        'alcohol': 1,
-        'belts': 1,
-        'property_damage': 1,
-        'work_zone': 2,
-        'hazmat': 2,
-        'arrest_type': 2,
-    }
     params = {
         '$limit': 50000,
     }
@@ -49,33 +37,29 @@ def get_violations():
         logger.error('Failed to get traffic violation data. Response: {0}'.format(r.text))
         return
 
+    violation_map = {
+        'alcohol': ["Yes"],
+        'property_damage': ["Yes"],
+        'work_zone': ["Yes"],
+        'arrest_type': ["K - Aircraft Assist", "P - Mounted Patrol"],
+        'vehicle_type': ["05 - Light Duty Truck", "06 - Heavy Duty Truck", "10 - Transit Bus"]
+    }
+
     geodata = r.json()
     result = []
     for v in geodata['features']:
         d = v['properties']
-        if (
-            sum(
-                [
-                (weight_map['alcohol'] if d['alcohol'] == 'Yes' else 0),
-                (weight_map['belts'] if d['belts'] == 'Yes' else 0),
-                (weight_map['property_damage'] if d['property_damage'] == 'Yes' else 0),
-                (weight_map['work_zone'] if d['work_zone'] == 'Yes' else 0),
-                (weight_map['hazmat'] if d['hazmat'] == 'Yes' else 0),
-                (weight_map['arrest_type'] if d['arrest_type'] in ['K - Aircraft Assist', 'P - Mounted Patrol'] else 0)
-                ]
-                ) < 2
-            
-            ):
-            continue
-        # Location data or bust
-        if v.get('geometry') is None:
-            continue
+        for key in violation_map:
+            if d.get(key) in violation_map.get(key) and v.get('geometry') is not None:
+                v['properties']['chat'] = get_chat()
+                result.append(v)
+                val = violation_map.get(key)
+                val.remove(d.get(key))
+                violation_map[key] = val
 
-        # Dialogue
-        v['properties']['chat'] = get_chat()
-        result.append(v)
+    logger.info('Number of matching results: ' + str(len(result)))
+    logger.info('Unmatched violation attributes: ' + str(violation_map))
 
-    logger.info('Number of results: ' + str(len(result)))
     current_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(current_dir, 'data/violations.geojson'), 'w+') as f:
         json.dump(result, f, indent=4, separators=(',', ': '), sort_keys=True)
