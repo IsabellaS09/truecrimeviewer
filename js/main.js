@@ -25,6 +25,21 @@
 		map.fitBounds(markers.getBounds());
 	});
 
+	function getVehicle(vType) {
+		if (/emerg/i.test(vType)) return 'emergency';
+		if (/boat/i.test(vType)) return 'boat';
+		if (/truck/i.test(vType)) return 'truck';
+		if (/bus/i.test(vType)) return 'bus';
+		return 'auto';
+	}
+
+	function getViolationType(vType) {
+		if (/citation/i.test(vType)) return 'citation';
+		// Somehow 2 cops aren't as funny as 3
+		// if (/citation/i.test(vType)) return '2';
+		return 'warning';
+	}
+
 	function renderScene(e) {
 		if (!assets) return; // hack
 		var feature = e.target.feature;
@@ -35,13 +50,18 @@
 		viewer.css('background-image', 'url("' + assets['background']['day'] + '")');
 
 		// vehicle 640 x 360 transparent
-		var v = assets['vehicle']['corolla'];
+		var v = assets['vehicle'][getVehicle(props['vehicle_type'])];
 		viewer.append('<img class="vehicle" src="' + v['url'] + '">');
 
-		// driver 300 x 120 transparent, assuming the neck is at the middle bottom
+		// driver, reference point middle bottom
 		var driver = assets['driver']['confused'];
 		viewer.append('<img class="driver" src="' + driver['url'] + '">');
-		viewer.find('.driver').css({top: v['driver']['top'], left: v['driver']['left']});
+		viewer.find('.driver').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
+
+		// cop, reference point middle bottom
+		var cop = assets['cop'][getViolationType(props['violation_type'])];
+		viewer.append('<img class="cop" src="' + cop['url'] + '">');
+		viewer.find('.cop').css({bottom: cop['bottom'], left: cop['left']});
 
 		// title, subject to change
 		viewer.append('<div>' + props.description + '</div>');

@@ -6,11 +6,39 @@
 	},
 	"vehicle_default_color" : "#7F7F7F",
 	"vehicle" : {
-		"corolla" : {
+		"auto" : {
 			"url" : "img/vehicle/corolla.png",
 			"driver" : {
-				"top" : 73,
-				"left" : 190
+				"bottom" : "47%",
+				"left" : "30%"
+			}
+		},
+		"boat" : {
+			"url" : "img/vehicle/boat.png",
+			"driver" : {
+				"bottom" : "73%",
+				"left" : "58%"
+			}
+		},
+		"bus" : {
+			"url" : "img/vehicle/bus.png",
+			"driver" : {
+				"bottom" : "62%",
+				"left" : "17%"
+			}
+		},
+		"emergency" : {
+			"url" : "img/vehicle/emergency.png",
+			"driver" : {
+				"bottom" : "47%",
+				"left" : "30%"
+			}
+		},
+		"truck" : {
+			"url" : "img/vehicle/truck.png",
+			"driver" : {
+				"bottom" : "68%",
+				"left" : "39%"
 			}
 		}
 	},
@@ -18,6 +46,18 @@
 	"driver" : {
 		"confused" : {
 			"url" : "img/driver/confused.png"
+		}
+	},
+	"cop" : {
+		"warning" : {
+			"url" : "img/cop/robo.png",
+			"bottom" : "10%",
+			"left" : "1%"
+		},
+		"citation" : {
+			"url" : "img/cop/robo3.png",
+			"bottom" : "5%",
+			"left" : "-5%"
 		}
 	}
 }
