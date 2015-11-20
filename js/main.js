@@ -94,7 +94,7 @@
 		scene.find('.vehicle.' + vk).show();
 
 		// driver, reference point middle bottom
-		var dk = 'confused';
+		var dk = isDay ? 'confused' : 'rage';
 		scene.find('.driver').hide();
 		scene.find('.driver.' + dk).css({bottom: v['driver']['bottom'], left: v['driver']['left']});
 		scene.find('.driver.' + dk).show();

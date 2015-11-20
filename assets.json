@@ -65,6 +65,9 @@
 	"driver" : {
 		"confused" : {
 			"url" : "img/driver/confused.png"
+		},
+		"rage" : {
+			"url" : "img/driver/rage.png"
 		}
 	},
 	"cop" : {
