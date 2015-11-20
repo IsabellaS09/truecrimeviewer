@@ -35,6 +35,7 @@
 		}
 
 		template.append('<img id="cone" style="bottom: 0; right: 2%;" src="img/cone.png">');
+		template.append('<img id="bottle" src="img/bottle.png">');
 		template.append('<div class="timestamp"></div>');
 	});
 
@@ -124,6 +125,11 @@
 
 		// Workzone
 		$('#cone').toggle(props['work_zone'] == 'Yes');
+
+		// Alcohol
+		var bottle = $('#bottle');
+		bottle.css({bottom: v['driver']['bottom'], left: v['driver']['left'], marginLeft: 166, marginBottom: -20});
+		bottle.toggle(props['alcohol'] == 'Yes');
 	}
 
 	$(document).ready(function() {
