@@ -15,7 +15,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "22-219(a)",
-            "chat": null,
+            "chat": {
+                "BERTRAM": "What is it, my good lord, the King languishes of?",
+                "LAFEU": "A fistula, my lord."
+            },
             "color": "RED",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -66,7 +69,10 @@
             "article": "Maryland Rules",
             "belts": "No",
             "charge": "11-393.9",
-            "chat": null,
+            "chat": {
+                "BERTRAM": "I heard not of it before.",
+                "LAFEU": "I would it were not notorious. Was this gentlewoman the"
+            },
             "color": "BLACK",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -117,7 +123,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "21-403(b)",
-            "chat": null,
+            "chat": {
+                "BERTRAM": "Madam, I desire your holy wishes.",
+                "LAFEU": "How understand we that?"
+            },
             "color": "WHITE",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -168,7 +177,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "21-801.1",
-            "chat": null,
+            "chat": {
+                "HELENA": "And you, monarch!",
+                "PAROLLES": "No."
+            },
             "color": "SILVER",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -219,7 +231,10 @@
             "article": null,
             "belts": "No",
             "charge": "64*",
-            "chat": null,
+            "chat": {
+                "HELENA": "And no.",
+                "PAROLLES": "Are you meditating on virginity?"
+            },
             "color": "BRONZE",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -270,7 +285,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "21-801.1",
-            "chat": null,
+            "chat": {
+                "HELENA": "How might one do, sir, to lose it to her own liking?",
+                "PAROLLES": "Let me see. Marry, ill to like him that ne'er it likes."
+            },
             "color": "MULTICOLOR",
             "commercial_license": "Yes",
             "commercial_vehicle": "No",
@@ -321,7 +339,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "16-303(c)",
-            "chat": null,
+            "chat": {
+                "HELENA": "That I wish well. 'Tis pity-",
+                "PAROLLES": "What's pity?"
+            },
             "color": "TAN",
             "commercial_license": "No",
             "commercial_vehicle": "No",
@@ -372,7 +393,10 @@
             "article": "Transportation Article",
             "belts": "No",
             "charge": "21-308(a)",
-            "chat": null,
+            "chat": {
+                "HELENA": "I especially think, under Mars.",
+                "PAROLLES": "Under Mars, I."
+            },
             "color": "GRAY",
             "commercial_license": "No",
             "commercial_vehicle": "No",

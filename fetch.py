@@ -66,13 +66,24 @@ def get_violations():
         'vehicle_type': ["05 - Light Duty Truck", "06 - Heavy Duty Truck", "10 - Transit Bus"]
     }
 
+    with open(os.path.join(current_dir, 'data/quotes.json'), 'r') as f:
+        quotes = json.load(f)
+
     geodata = r.json()
     result = []
+    i = 0
+    quotes_len = len(quotes) if quotes is not None else 0
+    logger.info('Quotes: {0}'.format(quotes_len))
+
     for v in geodata['features']:
         d = v['properties']
         for key in violation_map:
             if d.get(key) in violation_map.get(key) and v.get('geometry') is not None:
+                if quotes_len > 0:
+                    d['chat'] = quotes[i % quotes_len]
+                    i += 1
                 result.append(v)
+
                 val = violation_map.get(key)
                 val.remove(d.get(key))
                 violation_map[key] = val
