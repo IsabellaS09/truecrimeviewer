@@ -34,6 +34,7 @@
 			}
 		}
 
+		template.append('<img id="cone" style="bottom: 0; right: 2%;" src="img/cone.png">');
 		template.append('<div class="timestamp"></div>');
 	});
 
@@ -120,6 +121,9 @@
 		make.empty();
 		make.text(props['color'] + ' ' + props['make'] + ' ' + props['model']);
 		make.css({top: v['make']['top'], left: v['make']['left'], color: props['color']});
+
+		// Workzone
+		$('#cone').toggle(props['work_zone'] == 'Yes');
 	}
 
 	$(document).ready(function() {
