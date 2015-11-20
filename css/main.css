@@ -113,6 +113,9 @@ html, body {
 	content: 'REC ';
 }
 
+#make {
+	font-weight: bold;
+}
 
 
 

@@ -10,6 +10,10 @@
 			"driver" : {
 				"bottom" : "47%",
 				"left" : "30%"
+			},
+			"make" : {
+				"top" : "55%",
+				"left" : "42%"
 			}
 		},
 		"boat" : {
@@ -17,6 +21,10 @@
 			"driver" : {
 				"bottom" : "73%",
 				"left" : "58%"
+			},
+			"make" : {
+				"top" : "38%",
+				"left" : "41%"
 			}
 		},
 		"bus" : {
@@ -24,6 +32,10 @@
 			"driver" : {
 				"bottom" : "62%",
 				"left" : "17%"
+			},
+			"make" : {
+				"top" : "35%",
+				"left" : "50%"
 			}
 		},
 		"emergency" : {
@@ -31,6 +43,10 @@
 			"driver" : {
 				"bottom" : "47%",
 				"left" : "30%"
+			},
+			"make" : {
+				"top" : "55%",
+				"left" : "42%"
 			}
 		},
 		"truck" : {
@@ -38,6 +54,10 @@
 			"driver" : {
 				"bottom" : "68%",
 				"left" : "39%"
+			},
+			"make" : {
+				"top" : "38%",
+				"left" : "38%"
 			}
 		}
 	},

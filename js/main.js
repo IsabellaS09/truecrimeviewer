@@ -14,6 +14,8 @@
 				template.append('<img class="vehicle ' + vk + '" src="' + v['url'] + '">');
 			}
 		}
+		template.append('<div id="make"></div>');
+
 		// Driver
 		var drivers = a['driver'];
 		for (var dk in drivers) {
@@ -32,7 +34,7 @@
 			}
 		}
 
-		template.append('<div class="timestamp"></div>')
+		template.append('<div class="timestamp"></div>');
 	});
 
 	var map = L.map('map').setView([39.0869949,-77.1811684], 13);
@@ -112,6 +114,12 @@
 		qhtml += '<li><strong>' + quotes[0]['char'] + '</strong> ' + props['description'] + '</li>';
 		qhtml += '</ul>';
 		chat.append(qhtml);
+
+		// Make
+		var make = $('#make');
+		make.empty();
+		make.text(props['color'] + ' ' + props['make'] + ' ' + props['model']);
+		make.css({top: v['make']['top'], left: v['make']['left'], color: props['color']});
 	}
 
 	$(document).ready(function() {
