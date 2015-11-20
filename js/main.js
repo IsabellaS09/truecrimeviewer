@@ -65,6 +65,14 @@
 
 		// title, subject to change
 		viewer.append('<div>' + props.description + '</div>');
+
+	       	$.getJSON("data/quotes.json", function(json) {
+		    var chat = json.quotes[Math.round(Math.random()*json.quotes.length)];
+		    var officerChat = jQuery('<div class="chat"> Police Officer ' + chat.first + '</div>').css({top:"5%", left: "5%"});
+		    var violatorChat = jQuery('<div class="chat">' + chat.second + '</div>').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
+		    viewer.append(officerChat);
+		    viewer.append(violatorChat);
+		});
 	}
 
 	$(document).ready(function() {
