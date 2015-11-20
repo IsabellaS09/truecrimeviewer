@@ -1,9 +1,35 @@
 (function () {
-	var viewer = $('#viewer');
+	var wrapper = $('#wrapper');
+	var template = $('#viewer-template');
 	var assets = null;
 	$.getJSON('assets.json', function(a) {
 		// TODO Don't start doing things until we get this
 		assets = a;
+		// Vehicle
+		var vehicles = a['vehicle'];
+		for (var vk in vehicles) {
+			if (vehicles.hasOwnProperty(vk)) {
+				var v = vehicles[vk];
+				template.append('<img class="vehicle ' + vk + '" src="' + v['url'] + '">');
+			}
+		}
+		// Driver
+		var drivers = a['driver'];
+		for (var dk in drivers) {
+			if (drivers.hasOwnProperty(dk)) {
+				var d = drivers[dk];
+				template.append('<img class="driver ' + dk + '" src="' + d['url'] + '">');
+			}
+		}
+		// cop, reference point middle bottom
+		var cops = a['cop'];
+		for (var ck in cops) {
+			if (cops.hasOwnProperty(ck)) {
+				var c = cops[ck];
+				template.append('<img class="cop ' + ck + '" src="' + c['url'] + '">');
+				template.find('.cop.' + ck).css({bottom: c['bottom'], left: c['left']});
+			}
+		}
 	});
 
 	var map = L.map('map').setView([39.0869949,-77.1811684], 13);
@@ -44,27 +70,29 @@
 		if (!assets) return; // hack
 		var feature = e.target.feature;
 		var props = feature.properties;
-		viewer.empty();
+		var scene = template.clone();
+		scene.attr('id', 'viewer');
+		wrapper.empty();
+		wrapper.prepend(scene);
 
 		// background 640 x 360
-		viewer.css('background-image', 'url("' + assets['background']['day'] + '")');
+		scene.css('background-image', 'url("' + assets['background']['day'] + '")');
 
 		// vehicle 640 x 360 transparent
-		var v = assets['vehicle'][getVehicle(props['vehicle_type'])];
-		viewer.append('<img class="vehicle" src="' + v['url'] + '">');
+		var vk = getVehicle(props['vehicle_type']);
+		var v = assets['vehicle'][vk];
+		scene.find('.vehicle').hide();
+		scene.find('.vehicle.' + vk).show();
 
 		// driver, reference point middle bottom
-		var driver = assets['driver']['confused'];
-		viewer.append('<img class="driver" src="' + driver['url'] + '">');
-		viewer.find('.driver').css({bottom: v['driver']['bottom'], left: v['driver']['left']});
+		var dk = 'confused';
+		scene.find('.driver').hide();
+		scene.find('.driver.' + dk).css({bottom: v['driver']['bottom'], left: v['driver']['left']});
+		scene.find('.driver.' + dk).show();
 
-		// cop, reference point middle bottom
-		var cop = assets['cop'][getViolationType(props['violation_type'])];
-		viewer.append('<img class="cop" src="' + cop['url'] + '">');
-		viewer.find('.cop').css({bottom: cop['bottom'], left: cop['left']});
-
-		// title, subject to change
-		viewer.append('<div>' + props.description + '</div>');
+		var ck = getViolationType(props['violation_type']);
+		scene.find('.cop').hide();
+		scene.find('.cop.' + ck).show();
 	}
 
 	$(document).ready(function() {
