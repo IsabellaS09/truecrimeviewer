@@ -1,6 +1,7 @@
 (function () {
 	var wrapper = $('#wrapper');
 	var template = $('#viewer-template');
+	var chat = $('#chat');
 	var assets = null;
 	$.getJSON('assets.json', function(a) {
 		// TODO Don't start doing things until we get this
@@ -99,6 +100,18 @@
 		var ck = getViolationType(props['violation_type']);
 		scene.find('.cop').hide();
 		scene.find('.cop.' + ck).show();
+
+		// Chat
+		chat.empty();
+		var quotes = props['chat'];
+		var qhtml = '<ul>';
+		for (var i = 0; i < quotes.length; i++) {
+			var q = quotes[i];
+			qhtml += '<li><strong>' + q['char'] + '</strong> ' + q['text'] + '</li>';
+		}
+		qhtml += '<li><strong>' + quotes[0]['char'] + '</strong> ' + props['description'] + '</li>';
+		qhtml += '</ul>';
+		chat.append(qhtml);
 	}
 
 	$(document).ready(function() {

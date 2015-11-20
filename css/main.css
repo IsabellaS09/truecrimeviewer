@@ -95,6 +95,13 @@ html, body {
 	visibility: hidden;
 }
 
+#chat {
+	width: 640px;
+	position: absolute;
+	left: 0;
+	top: 360px;
+}
+
 .timestamp {
 	font-family: monospace;
 	font-weight: bold;

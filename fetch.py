@@ -34,10 +34,16 @@ def get_quotes():
                     if not prev_line_used:
                         l1 = prev_line.split('. ', 1)
                         l2 = line.split('. ', 1)
-                        result.append({
-                            l1[0]: l1[1],
-                            l2[0]: l2[1]
-                        })
+                        result.append([
+                            {
+                                'char': l1[0],
+                                'text': l1[1]
+                            },
+                            {
+                                'char': l2[0],
+                                'text': l2[1]
+                            },
+                        ])
                         prev_line_used = True
                     else:
                         prev_line_used = False  # avoid overlapping quotes
@@ -98,5 +104,5 @@ def get_violations():
 
 
 if __name__ == '__main__':
+    get_quotes()
     get_violations()
-    # get_quotes()
