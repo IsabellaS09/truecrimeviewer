@@ -486,5 +486,127 @@
             "year": "1997"
         },
         "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.244598,
+                39.205118
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "13-411(f)",
+            "chat": [
+                {
+                    "char": "PAROLLES",
+                    "text": "When he was predominant."
+                },
+                {
+                    "char": "HELENA",
+                    "text": "When he was retrograde, I think, rather."
+                }
+            ],
+            "color": "GRAY",
+            "commercial_license": "No",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2014-06-22T00:00:00.000",
+            "description": "DISPLAYING EXPIRED REGISTRATION PLATE ISSUED BY ANY STATE",
+            "dl_state": "MD",
+            "driver_city": "MONROVIA",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "39.2051183333333",
+            "location": "BRINK ROAD/RT 27",
+            "longitude": "-77.2445983333333",
+            "make": "LOAD",
+            "model": "TL",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "WHITE",
+            "state": "MD",
+            "subagency": "5th district, Germantown",
+            "time_of_stop": "10:38:00",
+            "timestamp": "2014-06-22T10:38:00",
+            "vehicle_type": "26 - Boat Trailer",
+            "violation_type": "Warning",
+            "work_zone": "No",
+            "year": "2011"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -77.027885,
+                38.996695
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "accident": "No",
+            "agency": "MCP",
+            "alcohol": "No",
+            "arrest_type": "A - Marked Patrol",
+            "article": "Transportation Article",
+            "belts": "No",
+            "charge": "21-201(a1)",
+            "chat": [
+                {
+                    "char": "PAROLLES",
+                    "text": "Why think you so?"
+                },
+                {
+                    "char": "HELENA",
+                    "text": "You go so much backward when you fight."
+                }
+            ],
+            "color": "YELLOW",
+            "commercial_license": "Yes",
+            "commercial_vehicle": "No",
+            "contributed_to_accident": "No",
+            "date_of_stop": "2014-07-16T00:00:00.000",
+            "description": "DRIVER FAILURE TO OBEY PROPERLY PLACED TRAFFIC CONTROL DEVICE INSTRUCTIONS",
+            "dl_state": "MD",
+            "driver_city": "SEAT PLEASANT",
+            "driver_state": "MD",
+            "fatal": "No",
+            "gender": "M",
+            "geolocation_address": null,
+            "geolocation_city": null,
+            "geolocation_state": null,
+            "geolocation_zip": null,
+            "hazmat": "No",
+            "latitude": "38.996695",
+            "location": "NB GEORGIA @ COLESVILLE RD",
+            "longitude": "-77.027885",
+            "make": "INTERNATIONAL",
+            "model": "SCHOOL BUS",
+            "personal_injury": "No",
+            "property_damage": "No",
+            "race": "BLACK",
+            "state": "DC",
+            "subagency": "3rd district, Silver Spring",
+            "time_of_stop": "11:46:00",
+            "timestamp": "2014-07-16T11:46:00",
+            "vehicle_type": "13 - Ambulance(Emerg)",
+            "violation_type": "Citation",
+            "work_zone": "No",
+            "year": "1997"
+        },
+        "type": "Feature"
     }
 ]
