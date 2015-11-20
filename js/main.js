@@ -25,6 +25,23 @@
 		map.fitBounds(markers.getBounds());
 	});
 
+	function raceToColor(race){
+		var raceMap = {
+			'hispanic':'#c0803f',
+			'black': '#3a2613',
+			'white': '#ecd8c5',
+			'asian': '#cc9966',
+			'native american': '#996533',
+			'other': '0000ff'
+		}
+		if(typeof raceMap[race.toLowerCase()] != 'undefined'){
+			return raceMap[race.toLowerCase()];
+		}
+		else {
+			return "FF0000"; // This should never happen
+		}
+	}
+
 	function renderScene(e) {
 		if (!assets) return; // hack
 		var feature = e.target.feature;
@@ -45,6 +62,10 @@
 
 		// title, subject to change
 		viewer.append('<div>' + props.description + '</div>');
+
+		var $img = jQuery('img.driver');
+		var src = swapImageColors($img, assets['driver_default_color'], raceToColor(props.race));
+		$img.attr('src', src);
 	}
 
 	$(document).ready(function() {
@@ -60,6 +81,52 @@
 		$('#map').width($(window).width());
 		$('#map').height($(window).height());
 		map.invalidateSize();
+	}
+
+	function hex2rgb(hex){
+		var long = parseInt(hex.replace(/^#/, ""), 16);
+	    return long ? {
+	        r: (long >>> 16) & 0xff,
+	        g: (long >>> 8) & 0xff,
+	        b: long & 0xff
+	    } : null;
+	}
+	function swapImageColors($img, fromHex, toHex){
+		// pull the entire image into an array of pixel data
+		if($img.height() < 1 || $img.width() < 1){
+			return $img.attr('src');
+		}
+		var h = $img.height();
+		var w = $img.width();
+		var canvas = document.createElement('canvas');
+		var $canvas = jQuery(canvas);
+		$canvas.height(h);
+		$canvas.width(w);
+		var context = canvas.getContext('2d');
+		context.drawImage($img[0], 0, 0);
+		var fromRGB = hex2rgb(fromHex);
+		var toRGB = hex2rgb(toHex);
+
+		var imageData = context.getImageData(0, 0, w, h);
+
+		// examine every pixel, 
+		// change any old rgb to the new-rgb
+		for (var i=0;i<imageData.data.length;i+=4)
+		  {
+		      // is this pixel the old rgb?
+		      if(imageData.data[i]==fromRGB.r &&
+		         imageData.data[i+1]==fromRGB.g &&
+		         imageData.data[i+2]==fromRGB.b
+		      ){
+		          // change to your new rgb
+		          imageData.data[i]=toRGB.r;
+		          imageData.data[i+1]=toRGB.g;
+		          imageData.data[i+2]=toRGB.b;
+		      }
+		  }
+		// put the altered data back on the canvas  
+		context.putImageData(imageData,0,0);
+		return canvas.toDataURL();
 	}
 
 }());
