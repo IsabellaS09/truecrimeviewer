@@ -57,6 +57,9 @@ textarea {
    ========================================================================== */
 
 #map {
+	position: absolute;
+	top: 0;
+	left: 640px;
 	height: 180px;
 }
 
@@ -70,9 +73,8 @@ html, body {
     width: 640px;
     height: 360px;
     position: absolute;
-    top: 50px;
-    left: 50%;
-    margin-left: -320px;
+    top: 0;
+    left: 0;
     background-color: white;
 }
 

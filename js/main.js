@@ -77,7 +77,7 @@
 
 	function resizeMap(){
 		// Make map full-screen
-		$('#map').width($(window).width());
+		$('#map').width($(window).width() - 640);
 		$('#map').height($(window).height());
 		map.invalidateSize();
 	}
