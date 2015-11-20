@@ -1,8 +1,7 @@
 {
 	"background" : {
 		"day" : "img/bg/day.png",
-		"dusk" : "img/bg/day.png",
-		"night" : "img/bg/day.png"
+		"night" : "img/bg/night.png"
 	},
 	"vehicle_default_color" : "#7F7F7F",
 	"vehicle" : {

@@ -30,6 +30,8 @@
 				template.find('.cop.' + ck).css({bottom: c['bottom'], left: c['left']});
 			}
 		}
+
+		template.append('<div class="timestamp"></div>')
 	});
 
 	var map = L.map('map').setView([39.0869949,-77.1811684], 13);
@@ -75,8 +77,12 @@
 		wrapper.empty();
 		wrapper.prepend(scene);
 
+		var tstamp = new Date(props['timestamp']);
+		var isDay = tstamp.getHours() > 6 && tstamp.getHours() < 18;
+		scene.find('.timestamp:first').text(props['timestamp']);
+
 		// background 640 x 360
-		scene.css('background-image', 'url("' + assets['background']['day'] + '")');
+		scene.css('background-image', 'url("' + assets['background'][isDay ? 'day' : 'night'] + '")');
 
 		// vehicle 640 x 360 transparent
 		var vk = getVehicle(props['vehicle_type']);

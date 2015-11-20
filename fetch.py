@@ -1,8 +1,8 @@
 import json
 import logging
 import os
-
 import re
+
 import requests
 
 
@@ -82,6 +82,8 @@ def get_violations():
                 if quotes_len > 0:
                     d['chat'] = quotes[i % quotes_len]
                     i += 1
+
+                d['timestamp'] = d['date_of_stop'][:11] + d['time_of_stop']
                 result.append(v)
 
                 val = violation_map.get(key)
