@@ -34,10 +34,10 @@
 	}
 
 	function getViolationType(vType) {
-		if (/warning/i.test(vType)) return '3';
+		if (/citation/i.test(vType)) return 'citation';
 		// Somehow 2 cops aren't as funny as 3
 		// if (/citation/i.test(vType)) return '2';
-		return '1';
+		return 'warning';
 	}
 
 	function renderScene(e) {

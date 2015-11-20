@@ -49,17 +49,12 @@
 		}
 	},
 	"cop" : {
-		"1" : {
+		"warning" : {
 			"url" : "img/cop/robo.png",
 			"bottom" : "10%",
 			"left" : "1%"
 		},
-		"2" : {
-			"url" : "img/cop/robo2.png",
-			"bottom" : "10%",
-			"left" : "0%"
-		},
-		"3" : {
+		"citation" : {
 			"url" : "img/cop/robo3.png",
 			"bottom" : "5%",
 			"left" : "-5%"
