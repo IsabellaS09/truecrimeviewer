@@ -9,38 +9,44 @@ import requests
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-def get_chat():
-    # TODO parse Shakespeare's plays
-    # Change dialogue format at will, add arguments to this method as necessary
-    result = {}
-    result['quotes'] = []
 
-    p = re.compile("([A-Z][a-z]+|([A-Z]+ ?[A-Z]+?)|[A-Z]+)\. ([\w !'?,;\.]+[!?\.])")  
+def get_quotes():
+    result = []
+
+    p = re.compile("([A-Z][a-z]+|([A-Z]+ ?[A-Z]+?)|[A-Z]+)\. ([\w !'?,;\.]+[!?\.])")
     line_count = 0
     prev_match = 0
     prev_line = ""
+    prev_line_used = False
 
-
-    current_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(current_dir, 'data/shakespeare.txt'), 'r+') as f:
         for line in f.readlines():
+            line = line.strip()
             line_count += 1
+            if line_count < 174:
+                # Don't read the license
+                continue
             match_group = p.search(line)
             if match_group:
-                if prev_match != 0 and prev_match == line_count-1:
-                    result['quotes'].append({
-                        "first" : prev_line,
-                        "second" : line
-                    })
-                prev_line = line 
+                if prev_match != 0 and prev_match == line_count - 1:
+                    if not prev_line_used:
+                        l1 = prev_line.split('. ', 1)
+                        l2 = line.split('. ', 1)
+                        result.append({
+                            l1[0]: l1[1],
+                            l2[0]: l2[1]
+                        })
+                        prev_line_used = True
+                    else:
+                        prev_line_used = False  # avoid overlapping quotes
+                prev_line = line
                 prev_match = line_count
-            
-    logger.info('Number of results: ' + str(len(result['quotes'])))
+
+    logger.info('Number of results: ' + str(len(result)))
     with open(os.path.join(current_dir, 'data/quotes.json'), 'w+') as f:
         json.dump(result, f, indent=4, separators=(',', ': '), sort_keys=True)
-    print result['quotes']
-    return
 
 
 def get_violations():
@@ -78,9 +84,9 @@ def get_violations():
                 (weight_map['hazmat'] if d['hazmat'] == 'Yes' else 0),
                 (weight_map['arrest_type'] if d['arrest_type'] in ['K - Aircraft Assist', 'P - Mounted Patrol'] else 0)
                 ]
-                ) < 2
-            
-            ):
+            ) < 2
+
+        ):
             continue
         # Location data or bust
         if v.get('geometry') is None:
@@ -89,11 +95,10 @@ def get_violations():
         result.append(v)
 
     logger.info('Number of results: ' + str(len(result)))
-    current_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(current_dir, 'data/violations.geojson'), 'w+') as f:
         json.dump(result, f, indent=4, separators=(',', ': '), sort_keys=True)
 
 
 if __name__ == '__main__':
-   # get_violations()
-    get_chat()
+    # get_violations()
+    get_quotes()
